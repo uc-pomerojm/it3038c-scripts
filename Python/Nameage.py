@@ -15,16 +15,16 @@ while myname != 'AJ':
 while myname != 'your name':
     print('this is not "your name". Please type "your name"')
 
-if myage < 13:
-    print("you a minor")
-    elif myage == 13:
-       print("your a teen now")
-    elif myage > 13 and myage < 30:
-        print("youre young and dumb")
-    elif myage >= 30 and myage <=65:
-        print("im adulting")
-    else:
-        print("your still alive")
+#if myage < 13:
+    #print("you a minor")
+    #elif myage == 13:
+     #  print("your a teen now")
+    #elif myage > 13 and myage < 30:
+     #   print("youre young and dumb")
+    #elif myage >= 30 and myage <=65:
+      #  print("im adulting")
+    #else:
+        ##print("your still alive")
 
 programage = int(time.time() - start_time)
 print("%s? Thats funny. Im only %s seconds old." % (myage, programage))
