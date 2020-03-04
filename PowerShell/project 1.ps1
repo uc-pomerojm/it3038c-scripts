@@ -6,7 +6,7 @@ $Version = (wmic qfe list)
 write-host("this machine latest feature list is $Version")
 
 #set the body varible 
-$body = "This machines ip is $IP. User is $User the date is Get-Date, PowerShell Here is a list of the lastest feature updates that you had installed $Version"
+$body = "This machines list of the lastest feature updates that you had installed $Version"
 
 write-host($body)
 
