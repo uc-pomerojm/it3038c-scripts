@@ -1,15 +1,6 @@
-﻿#this script sends my ip to my email
+﻿#this script sends the latest feature update list to my email
 
-#$IP is my ip fuction 
-
-function getIP {
-(Get-NetIPAddress).IPAddress | Select-string "192*"
-}
-
-#set ip variable 
-$IP = (getIP)
-
-#here isthe latest feature update
+#Here is the latest feature update
 $Version = (wmic qfe list)
 
 write-host("this machine latest feature list is $Version")
