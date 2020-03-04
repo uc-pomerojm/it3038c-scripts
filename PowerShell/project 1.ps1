@@ -8,13 +8,14 @@ function getIP {
 
 #set ip variable 
 $IP = (getIP)
-    
+
+#here isthe latest feature update
 $Version = (wmic qfe list)
 
 write-host("this machine latest feature list is $Version")
 
 #set the body varible 
-$body = "This machines ip is $IP. User is $User Hostname is $env:COMPUTERNAME the date is Get-Date PowerShell Version is $Version"
+$body = "This machines ip is $IP. User is $User the date is Get-Date, PowerShell Here is a list of the lastest feature updates that you had installed $Version"
 
 write-host($body)
 
