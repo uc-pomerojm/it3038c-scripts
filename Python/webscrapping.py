@@ -1,12 +1,10 @@
-from bs4 import BeautifulSoup
 import requests, re
+from bs4 import BeautifulSoup
 
-r = requests.get('https://analytics.usa.gov').content
-soup = BeautifulSoup(r, "lxml")
-
-for link in soup.find_all('a', attrs={'href':re.compile}):
-    print(link.get('href'))
-
-print(type(soup))
-print(soup.prettify()[:100])
-
+data = requests.get("https://webscraper.io").content
+soup = BeautifulSou(data, 'html.parser')
+span = soup.find("h1",{"class":"product_information_title__2rG9M product_title gl-heading gl-heading--m"})
+title = span.text
+span = soup.find("span", {"class":"gl-price__value gl-price__value--sale"})
+price = span.text
+print("item %s has price %s" % (title, price))
